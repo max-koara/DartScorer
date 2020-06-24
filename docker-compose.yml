@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  
+  docker-mysql:
+    image: mysql:5.7
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=php_db
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
